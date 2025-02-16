@@ -21,6 +21,7 @@ const checkVisibility = () => {
     });
 };
 
+// Добавляем функциональность бургер-меню
 const menuToggle = document.getElementById('menuToggle');
 const menu = document.getElementById('menu');
 
