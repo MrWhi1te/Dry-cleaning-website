@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Анимация появления блоков при прокрутке
-const sections = document.querySelectorAll('.about, .services, .benefits, .contacts');
+const sections = document.querySelectorAll('.company-block, .services, .benefits, .contacts');
 
 const checkVisibility = () => {
     sections.forEach(section => {

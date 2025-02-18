@@ -10,6 +10,10 @@
 <body>
     <header>
         <div class="logo">Чистота Мебели</div>
+        <div class="number">
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <a href="tel:+79">+7 900 123 07 82</a>
+        </div>
         <nav>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -17,7 +21,7 @@
                 <span></span>
             </div>
             <ul id="menu">
-                <li><a href="#about">О нас</a></li>
+                <li><a href="#company-block">О нас</a></li>
                 <li><a href="#reviews">Отзывы</li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#benefits">Преимущества</a></li>
@@ -26,115 +30,23 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" style="position: relative;">
         <div class="hero-content">
-            <h1>Профессиональная химчистка мебели</h1>
+            <h1>Профессиональная <span style="color: #ffcc00;">химчистка</span> мебели в Петрозаводске</h1>
             <p>Вернем вашей мебели первозданный вид с использованием экологически чистых средств.</p>
             <a href="#contacts" class="cta-button">Заказать услугу</a>
         </div>
+        <section class="estimation" style="position: absolute;">
+            <img src="images/mobile.png" alt="">
+            <div class="estimation-content">
+                <h2>Оценка стоимости химчистки</h2>
+                <p>Пришлите фото вашей мебели в WhatsApp и мы бесплатно рассчитаем стоимость работ</p>
+                <button>Рассчитать стоимость</button>
+            </div>
+        </section>
     </section>
-
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2>О нас</h2>
-            <p>Мы — команда профессионалов, которая специализируется на химчистке мебели. Наша миссия — сделать ваш дом чистым и уютным, сохраняя экологию и здоровье вашей семьи.</p>
-        </div>
-        <div class="about-image">
-            <img src="images/whiteChair2.jpg" alt="О нас">
-        </div>
-    </section>
-
-    <section id="reviews" class="reviews">
-        <div class="reviews-wrapper">
-            <div class="reviews-image">
-                <img src="https://sdelkaveka.com/Harkov/Himhistka/Divan/pochistit_divan.jpg" alt="Фото химчистки">
-            </div>
-        <div class="reviews-content">
-            <h2>Отзывы наших клиентов</h2>
-            <div class="reviews-carousel">
-                <div class="review-item active">
-                    <div class="review-content">
-                        <img src="https://avatars.mds.yandex.net/get-altay/4737312/2a0000017ae2d62d974620ea52668e5bff0e/XXL" alt="Фото работы 1">
-                        <p>"Отличный сервис! Диван выглядит как новый. Спасибо большое!"</p>
-                        <span class="client-name">— Анна</span>
-                    </div>
-                </div>
-                <div class="review-item">
-                    <div class="review-content">
-                        <img src="https://avatars.mds.yandex.net/get-ydo/2793943/2a0000018b8bd5bf80cdb6e01f942939c0aa/diploma" alt="Фото работы 2">
-                        <p>"Очень довольна результатом. Быстро и качественно!"</p>
-                        <span class="client-name">— Ирина</span>
-                    </div>
-                </div>
-                <div class="review-item">
-                    <div class="review-content">
-                        <img src="https://avatars.mds.yandex.net/get-ydo/3927470/2a0000017d34428371e065852109f00f8371/diploma" alt="Фото работы 3">
-                        <p>"Спасибо за чистку ковра. Теперь он как новый!"</p>
-                        <span class="client-name">— Дмитрий</span>
-                    </div>
-                </div>
-                <div class="review-item">
-                    <div class="review-content">
-                        <img src="https://yandex-images.clstorage.net/a96HPP435/bc604ed6o/v6JpInPqEGxh1mjjj9DTSeVATWUA4SaePiaMsqOBPe4LmYIkGBc8KUcxduoFQIeW9t1qQ0-Wv67iWW50f7SzoYq3aF9bgh19JYs4upu5o0DhKRWB2EHO3xI6hMPPYdU7uxVOyNTWncCmCDK3DCkzbrdci8IK71P3FqX3BGudtkzP1mz7SgI0VPWWxJ9OOFf9oJARtXBJis8q3iyjXzltIyupprzA3tnc1ogbayTpjxePqHeyPhPnJ76ZL1z3VSbMt6Yo-27evLyp5rSbavynxaTEucUI5VrPVqIwv9cBoR-HUf7Y-EY9_JL0VxuspfOPLyyjngoL0zOuaXfUM9VOEHfW6E9mZsScBR48C_pQX5mgwB1ZfO0m86ZGSIN7GQGzBznmZLSShUTeUOvbrEHfq1_A-5Iqc2s3klEPOB91IhAvShxzHsoglCGWoLceuPuR_BiNfWSRjieutrxbxyGBkyuV7mQgJmnMBiyLT-C5V4enMMMqwkuTWyaVq3wTATJgP7ps-yYytOSpTgRzVuQv7ZjkdWmAeerLwv5Ad7PF4SeHtS5gCMJVgD7A46P0pf-DG9QLVt6P0-cumX9Iu4Gq7CeiKPd63kT0BSLUp2LIWz2MNHklcGnWx7rCrOeXsXVbZzm-1ES-OSwOBHe3jNHvCw-sS6amG4dv1sm_LK9xpsT_KmTr9u6kdNFG0P8GuIOR7JyJbeSVnr_iuoSntyUZe3u1lkQsJp3IhrjrI_hVVw-vsCNiZvOHLy4pA7DrWUb0I-7MV8piwATBRqyzDnjfPbxUTUmcFTb7qiqMh_sVLZ87RaZodGIlYBL8s9PoZUOrC7iLOtaz_5_q9V8wJ4nOsLOGgKMGvogQzZ5Ek36IzwkIVAXBbNWGtyKyKH8rjfnbFxXSqHzujTyKBCvLUDUXo98MA2JuD_NninVfSNuJHqBzwkSrbuqgVE0CyDf-7FeNQKQRfVBBYnMK3rB7P0GA" alt="Фото работы 4">
-                        <p>"Отличная работа! Рекомендую всем."</p>
-                        <span class="client-name">— Ольга</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Наши услуги</h2>
-        <div class="cards-container">
-            <div class="card">
-                <img src="images/cardCouch.png" alt="Диван">
-                <h3>Диван</h3>
-                <p>от 3500 руб.</p>
-                <button>Заказать</button>
-            </div>
-            <div class="card">
-                <img src="images/cardChair.png" alt="Кресло">
-                <h3>Кресло</h3>
-                <p>от 1500 руб.</p>
-                <button>Заказать</button>
-            </div>
-            <div class="card">
-                <img src="images/cardMattress.png" alt="Матрас">
-                <h3>Матрас</h3>
-                <p>от 2000 руб.</p>
-                <button>Заказать</button>
-            </div>
-            <div class="card">
-                <img src="images/cardCarpet.png" alt="Ковер/ковролин">
-                <h3>Ковер/ковролин</h3>
-                <p>от 1500 руб.</p>
-                <button>Заказать</button>
-            </div>
-        </div>
-        <div class="services-grid">
-            <div class="service-item">
-                <i class="fas fa-couch"></i>
-                <h3>Химчистка диванов</h3>
-                <p>Удаление пятен, запахов и глубокое очищение обивки.</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-chair"></i>
-                <h3>Химчистка кресел</h3>
-                <p>Восстановление цвета и текстуры ткани.</p>
-            </div>
-            <div class="service-item">
-                <i class="fa-solid fa-house"></i>
-                <h3>Чистка ковров</h3>
-                <p>Профессиональная чистка ковров и ковролина.</p>
-            </div>
-        </div>
-    </section>
-
-    
 
     <section id="benefits" class="benefits">
-        <h2>Почему выбирают нас?</h2>
         <div class="benefits-grid">
             <div class="benefit-item">
                 <i class="fa-solid fa-leaf"></i>
@@ -151,6 +63,146 @@
                 <h3>Гарантия</h3>
                 <p>100% гарантия качества и удовлетворения результатом.</p>
             </div>
+            <div class="benefit-item">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                <h3>Прозрачность</h3>
+                <p>Никаких скрытых платежей, фиксированная стоимость услуг.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-couch"></i>
+                <h3>Химчистка диванов</h3>
+                <p>Удаление пятен, запахов и глубокое очищение обивки.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-chair"></i>
+                <h3>Химчистка кресел</h3>
+                <p>Восстановление цвета и текстуры ткани.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-house"></i>
+                <h3>Чистка ковров</h3>
+                <p>Профессиональная чистка ковров и ковролина.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="company-block" class="company-block">
+        <div class="images-section">
+          <div class="left-images">
+            <div class="photo1-container">
+              <img src="images/about1.jpg" alt="Photo 1" class="photo1">
+            </div>
+            <div class="photo2-container">
+              <img src="images/about2.jpg" alt="Photo 2" class="photo2">
+              <div class="overlay-text">
+                <span class="text">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    1000+
+                </span>
+                довольных клиентов
+              </div>
+            </div>
+          </div>
+          <div class="photo3-container">
+            <img src="images/about3.jpg" alt="Photo 3" class="photo3">
+          </div>
+        </div>
+        <div class="text-section">
+            <div class="sub">
+                <span>О нас</span>
+                <i class="fa fa-address-card" aria-hidden="true"></i>
+            </div>
+            <h2>Ваш надежный помощник в уюте и <span style="color: #ffcc00;">чистоте</span> в Петрозаводске!</h2>
+            <p>Мы — команда профессионалов, которая специализируется на химчистке мебели c 2016 года. Наша миссия — сделать ваш дом чистым и уютным, сохраняя экологию и здоровье вашей семьи.</p>
+            <ul class="company-features">
+                <li>
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <span>Химчистка на дому</span>
+                </li>
+                <li>
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <span>Профессиональное оборудование</span>
+                </li>
+                <li>
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <span>Сертифицированные и гипоаллергенные средства</span>
+                </li>
+                <li>
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <span>Доступные цены без потери качества</span>
+                </li>
+            </ul>
+            <button>Заказать химчистку</button>
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <h2>Цены на услуги химчистки</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="images/pictureCouch.jpg" alt="Диван">
+                <h3>Диван</h3>
+                <p>от 3500 руб.</p>
+                <button>Заказать</button>
+            </div>
+            <div class="card">
+                <img src="images/pictureChair.jpg" alt="Кресло">
+                <h3>Кресло</h3>
+                <p>от 1500 руб.</p>
+                <button>Заказать</button>
+            </div>
+            <div class="card">
+                <img src="images/pictureMattress.jpg" alt="Матрас">
+                <h3>Матрас</h3>
+                <p>от 2000 руб.</p>
+                <button>Заказать</button>
+            </div>
+            <div class="card">
+                <img src="images/pictureCarpet.jpg" alt="Ковер/ковролин">
+                <h3>Ковер/ковролин</h3>
+                <p>от 1500 руб.</p>
+                <button>Заказать</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="memo" class="memo">
+        <div class="memo-container">
+            <div class="textSub">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <span>Зачем нужна химчистка мебели</span>
+            </div>
+            <p>Ваша мебель — это не просто часть интерьера, это место, где вы отдыхаете, проводите время с близкими и создаете уют. Но со временем даже самая качественная мебель теряет свой вид и накапливает загрязнения. Вот почему химчистка мебели — это не просто услуга, а необходимость для вашего комфорта и здоровья.</p>
+            <ul class="arg">
+                <li>
+                    <i class="fa fa-magic" aria-hidden="true"></i>
+                    <div class="text">
+                        <h4>Вернуть первоначальный вид</h4>
+                        <p>Пятна, пыль и затертости могут испортить внешний вид даже самой дорогой мебели. Химчистка удаляет глубокие загрязнения, возвращая мебели свежесть и яркость.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-bug" aria-hidden="true"></i>
+                    <div class="text">
+                        <h4>Избавиться от пыли, клещей и аллергенов</h4>
+                        <p>Мягкая мебель — это настоящий "магнит" для пыли, бактерий и пылевых клещей, которые могут вызывать аллергию и проблемы с дыханием. Химчистка уничтожает вредные микроорганизмы, создавая безопасную среду для вас и вашей семьи.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-smoking"></i>
+                    <div class="text">
+                        <h4>Устранить неприятные запахи</h4>
+                        <p>Пролитые напитки, следы домашних животных или просто застоявшийся воздух могут оставлять неприятные запахи. Химчистка не только очищает, но и освежает мебель, устраняя любые ароматы.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-face-smile"></i>
+                    <div class="text">
+                        <h4>Продлить срок службы мебели</h4>
+                        <p>Регулярная химчистка помогает сохранить структуру ткани и наполнителя, предотвращая износ и разрушение. Это не только экономит ваши деньги, но и сохраняет любимую мебель на долгие годы.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
