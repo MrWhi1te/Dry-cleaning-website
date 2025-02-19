@@ -21,44 +21,48 @@ const checkVisibility = () => {
     });
 };
 
-// Добавляем функциональность бургер-меню
-const menuToggle = document.getElementById('menuToggle');
-const menu = document.getElementById('menu');
-
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-
 window.addEventListener('scroll', checkVisibility);
 window.addEventListener('load', checkVisibility);
 
-// Карусель отзывов
-const reviewItems = document.querySelectorAll('.review-item');
-let currentIndex = 0;
+//
 
-const showReview = (index) => {
-    // Скрываем все отзывы
-    reviewItems.forEach((item) => {
-        item.classList.remove('active');
+document.getElementById('openFormBtn').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'flex';
+});
+
+document.getElementById('closeFormBtn').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'none';
+});
+
+document.getElementById('overlay').addEventListener('click', function(event) {
+    if (event.target === this) {
+        document.getElementById('overlay').style.display = 'none';
+    }
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxv0qETxYicVMmC3bjkRuxwW8veqI5V_K8LzbA7hDWZHyBN2km6-Tu4r4AFKX4GY4Ih/exec';
+
+    fetch(scriptUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, phone })
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert('Заявка отправлена!');
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
     });
+});
 
-    // Показываем выбранный отзыв
-    reviewItems[index].classList.add('active');
-    currentIndex = index;
-};
 
-const showNextReview = () => {
-    const nextIndex = (currentIndex + 1) % reviewItems.length;
-    showReview(nextIndex);
-};
 
-// Автоматическая смена отзывов
-let autoCarousel = setInterval(showNextReview, 4000);
-
-// Останавливаем автоматическую смену при ручном переключении
-const stopAutoCarousel = () => {
-    clearInterval(autoCarousel);
-};
-
-// Показываем первый отзыв сразу
-showReview(currentIndex);
