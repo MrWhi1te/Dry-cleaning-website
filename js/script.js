@@ -26,8 +26,10 @@ window.addEventListener('load', checkVisibility);
 
 //
 
-document.getElementById('openFormBtn').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'flex';
+document.querySelectorAll('.openFormBtn').forEach(function(button) {
+    button.addEventListener('click', function() {
+        document.getElementById('overlay').style.display = 'flex';
+    });
 });
 
 document.getElementById('closeFormBtn').addEventListener('click', function() {
@@ -64,5 +66,29 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     });
 });
 
+//
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(showNotification, 10000); // Показ уведомления через 10 секунд
+});
 
+function showNotification() {
+    const notification = document.getElementById("notification");
+    const notificationSound = document.getElementById("notificationSound");
+    notification.style.display = "block";
+    notificationSound.play();
+}
+
+function toggleNotification() {
+    const content = document.querySelector(".notification-content");
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+
+function closeNotification() {
+    const notification = document.getElementById("notification");
+    notification.style.display = "none";
+}
 

@@ -12,8 +12,7 @@
     <header>
         <div class="logo">Чистота Мебели</div>
         <div class="number">
-            <i class="fa fa-phone-square" aria-hidden="true"></i>
-            <a href="tel:+79">+7 900 123 07 82</a>
+            <a href="tel:+79"><i class="fa fa-phone-square" aria-hidden="true"></i>+7 900 123 07 82</a>
         </div>
         <nav>
             <div class="menu-toggle" id="menuToggle">
@@ -23,7 +22,7 @@
             </div>
             <ul id="menu">
                 <li><a href="#company-block">О нас</a></li>
-                <li><a href="#reviews">Отзывы</li>
+                <li><a href="#review-section">Отзывы</li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#benefits">Преимущества</a></li>
                 <li><a href="#contacts">Контакты</a></li>
@@ -35,14 +34,17 @@
         <div class="hero-content">
             <h1>Профессиональная <span style="color: #ffcc00;">химчистка</span> мебели в Петрозаводске</h1>
             <p>Вернем вашей мебели первозданный вид с использованием экологически чистых средств.</p>
-            <a href="#contacts" id="openFormBtn" class="cta-button">Заказать химчистку</a>
+            <button class="openFormBtn cta-button">Заказать химчистку</button>
         </div>
         <section class="estimation" style="position: absolute;">
-            <img src="images/mobile.png" alt="">
+            <img src="images/mobile.png" alt="Оценка стоимости химчистки в WhatsApp">
             <div class="estimation-content">
                 <h2>Оценка стоимости химчистки</h2>
-                <p>Пришлите фото вашей мебели в WhatsApp и мы бесплатно рассчитаем стоимость работ</p>
-                <button>Рассчитать стоимость в WhatsApp</button>
+                <p>Пришлите фото вашей мебели в WhatsApp или Telegram и мы бесплатно рассчитаем стоимость работ</p>
+                <div class="estBttnContainer">
+                    <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i> Рассчитать стоимость в WhatsApp</a>
+                    <a href="https://t.me/King_of_hipsters" target="_blank"><i class="fab fa-telegram"></i> Рассчитать стоимость в Telegram</a>
+                </div>
             </div>
         </section>
     </section>
@@ -81,8 +83,8 @@
             </div>
             <div class="benefit-item">
                 <i class="fa-solid fa-house"></i>
-                <h3>Чистка ковров</h3>
-                <p>Профессиональная чистка ковров и ковролина.</p>
+                <h3>Чистка ковролина</h3>
+                <p>Профессиональная чистка ковролина.</p>
             </div>
         </div>
     </section>
@@ -133,7 +135,7 @@
                     <span>Доступные цены без потери качества</span>
                 </li>
             </ul>
-            <button>Заказать химчистку</button>
+            <button class="openFormBtn">Заказать химчистку</button>
         </div>
     </section>
     
@@ -144,25 +146,25 @@
                 <img src="images/pictureCouch.jpg" alt="Чистка дивана">
                 <h3>Химчистка дивана</h3>
                 <p>от 3500 руб.</p>
-                <button>Заказать</button>
+                <button class="openFormBtn">Заказать</button>
             </div>
             <div class="card">
                 <img src="images/pictureChair.jpg" alt="Чистка кресла">
                 <h3>Химчистка кресла</h3>
                 <p>от 1500 руб.</p>
-                <button>Заказать</button>
+                <button class="openFormBtn">Заказать</button>
             </div>
             <div class="card">
                 <img src="images/pictureMattress.jpg" alt="Чистка матраса">
                 <h3>Химчистка матраса</h3>
                 <p>от 2000 руб.</p>
-                <button>Заказать</button>
+                <button class="openFormBtn">Заказать</button>
             </div>
             <div class="card">
                 <img src="images/pictureCovrolin.jpg" alt="Чистка ковролина">
                 <h3>Химчистка ковролина</h3>
                 <p>от 500 руб за кв.м.</p>
-                <button>Заказать</button>
+                <button class="openFormBtn">Заказать</button>
             </div>
         </div>
     </section>
@@ -316,7 +318,6 @@
     <section id="review-section" class="review-section">
         <div class="container">
             <div class="container-text">
-                <!-- <i class="fa-solid fa-face-smile"></i> -->
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -328,7 +329,6 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
-                <!-- <i class="fa-solid fa-face-smile"></i> -->
             </div>
             <div class="swiper-container swiper-2">
                 <div class="swiper-wrapper">
@@ -389,11 +389,24 @@
         </div>
     </section>
 
+    <section id="connection-section" class="connection-section">
+        <div class="connection-back">
+            <div class="connection-container">
+                <div class="con_sub">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h2>Остались вопросы?</h2>
+                </div>
+                <h3>Тогда свяжитесь с нами или оставьте свои контакты и мы Вам перезвоним!</h3>
+                <button class="openFormBtn">Оставить контакты</button>
+            </div>
+        </div>
+    </section>
+
     <section id="contacts" class="contacts">
         <h2>Свяжитесь с нами</h2>
         <p>Мы всегда на связи! Выберите удобный способ связи:</p>
         <div class="social-links">
-            <a href="https://t.me/yourtelegram" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="https://t.me/King_of_hipsters" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </section>
@@ -403,14 +416,33 @@
             <span id="closeFormBtn" class="close-btn">&times;</span>
             <h2>Оставьте заявку и мы Вам перезвоним</h2>
             <form id="contactForm">
-                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+                <div class="input-field">
+                    <label for="name" class="fa-regular fa-user"></label>
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="input-field">
+                    <label for="phone" class="fa-solid fa-phone"></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+                </div>
                 <button type="submit">Отправить</button>
             </form>
         </div>
     </div>
 
     <div id="successMessage" class="success-message">Заявка принята</div>
+
+    <div id="notification" class="notification">
+        <div class="notification-icon" onclick="toggleNotification()">🔔</div>
+        <div class="notification-content">
+            <span class="close-btn" onclick="closeNotification()">&times;</span>
+            <p>При заказе с сайта, скидка 10% на любой заказ!</p>
+            <button class="openFormBtn">Заказать</button>
+        </div>
+    </div>
+
+    <audio id="notificationSound">
+        <source src="sound/notification.mp3" type="audio/mpeg">
+    </audio>
 
     <footer>
         <p>&copy; 2025 Чистота Мебели. Все права защищены.</p>
