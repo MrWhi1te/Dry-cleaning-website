@@ -48,18 +48,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
 
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxv0qETxYicVMmC3bjkRuxwW8veqI5V_K8LzbA7hDWZHyBN2km6-Tu4r4AFKX4GY4Ih/exec';
+    const scriptUrl = `https://script.google.com/macros/s/AKfycbxv0qETxYicVMmC3bjkRuxwW8veqI5V_K8LzbA7hDWZHyBN2km6-Tu4r4AFKX4GY4Ih/exec?name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`;
 
     fetch(scriptUrl, {
-        redirect: "follow",
-        method: 'POST',
-        headers: {
-            "Content-Type": "text/plain;charset=utf-8",
-            // 'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, phone })
+        method: 'GET',
+        redirect: 'follow'
     })
-    .then(response => response.text())
+    .then(response => response.json())
     .then(data => {
         alert('Заявка отправлена!');
     })
