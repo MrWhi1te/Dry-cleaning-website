@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Анимация появления блоков при прокрутке
-const sections = document.querySelectorAll('.company-block, .services, .benefits, .contacts');
+const sections = document.querySelectorAll('.company-block, .services, .benefits, .contacts, .work-section, .review-section, .connection-section');
 
 const checkVisibility = () => {
     sections.forEach(section => {
@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function showNotification() {
     const notification = document.getElementById("notification");
-    const notificationSound = document.getElementById("notificationSound");
+    // const notificationSound = document.getElementById("notificationSound");
     notification.style.display = "block";
-    notificationSound.play();
+    // notificationSound.play();
 }
 
 function toggleNotification() {
