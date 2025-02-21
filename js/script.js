@@ -51,6 +51,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const scriptUrl = 'https://script.google.com/macros/s/AKfycbxv0qETxYicVMmC3bjkRuxwW8veqI5V_K8LzbA7hDWZHyBN2km6-Tu4r4AFKX4GY4Ih/exec';
 
     fetch(scriptUrl, {
+        redirect: "follow",
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
