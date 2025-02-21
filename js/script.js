@@ -54,7 +54,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         redirect: "follow",
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "text/plain;charset=utf-8",
+            // 'Content-Type': 'application/json'
         },
         body: JSON.stringify({ name, phone })
     })
