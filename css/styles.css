@@ -1117,6 +1117,10 @@ button:hover {
         height: 450px;
     }
 
+    /*  */
+    .connection-section {
+        padding: 0;
+    }
     .connection-container .con_sub {
         text-wrap: nowrap;
         gap: 5px;
