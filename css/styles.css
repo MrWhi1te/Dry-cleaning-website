@@ -875,7 +875,12 @@ button:hover {
     text-align: center;
     z-index: 15;
     cursor: pointer;
+    animation: shrink 1.5s infinite ease-out, borderPulse 1.5s infinite ease-out;
     display: none;
+}
+
+.notification:hover {
+    animation: step-end;
 }
 
 .notification-icon {
@@ -922,6 +927,125 @@ button:hover {
     color: #ffffff;
 }
 
+/* Popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.popup {
+    background-image: url("../images/sale3.png");
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 5px solid #ff0000;
+    width: 500px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup .close-btn {
+    color: #000000;
+    font-size: 30px;
+}
+
+.popup h2 {
+    color: #000000;
+    font-size: 26px;
+    margin-top: 5px;
+}
+
+.popup-card {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background-color: #000000d2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-text {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.scratch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.scratch-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #ffffff;
+    z-index: 3; 
+    pointer-events: none; /* Чтобы надпись не блокировала стирание */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    transition: opacity 0.3s ease; 
+}
+
+.scratch-label.hidden {
+    opacity: 0; 
+}
+
+.popup button {
+    text-wrap: nowrap;
+    text-align: center;
+    width: 50%;
+    animation: shrink 1.5s infinite ease-out, borderPulse 1.5s infinite ease-out;
+    opacity: 0;
+    transition: opacity 1s ease; 
+    margin-bottom: 0;
+}
+
+.popup button.visible {
+    opacity: 1; 
+}
+
+.popup button:hover {
+    animation: step-end;
+}
+
+@keyframes shrink {
+    0% {
+      transform: scaleY(1);
+    }
+  
+    49% {
+      transform: scale(0.97, 0.97);
+    }
+  
+   100% {
+      transform: scaleY(1);
+    }
+  
+  }
+
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
@@ -930,7 +1054,7 @@ button:hover {
     }
 
     header .number a, header .logo  {
-        font-size: 20px;
+        font-size: 19px;
         text-align: center;
     }
 
@@ -1129,7 +1253,7 @@ button:hover {
         height: 450px;
     }
 
-    /*  */
+    /* Connection */
     .connection-section {
         padding: 0;
     }
@@ -1142,6 +1266,11 @@ button:hover {
 
     .connection-container button {
         width: 70%;
+    }
+
+    /* Popup */
+    .popup button {
+        width: 60%;
     }
 }
 

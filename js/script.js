@@ -65,14 +65,12 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
 //
 document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(showNotification, 10000); // Показ уведомления через 10 секунд
+    setTimeout(showNotification, 20000); // Показ уведомления через 10 секунд
 });
 
 function showNotification() {
     const notification = document.getElementById("notification");
-    // const notificationSound = document.getElementById("notificationSound");
     notification.style.display = "block";
-    // notificationSound.play();
 }
 
 function toggleNotification() {
