@@ -48,7 +48,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
 
-    const scriptUrl = `https://script.google.com/macros/s/AKfycbxK_fPwEGtEjPSXPLF8Lf8Y7juj18ef02VG3oC60QtXqEgCxC9HxMfpMLwXkJ2WR025/exec?name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`;
+    const scriptUrl = `https://script.google.com/macros/s/AKfycby-FBk5pxEmPO4U_s3tDcW_mBn2iouSzqhnDMJKf-usPXHhPckArKqui3hzWNnkp8xQ/exec?name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`;
 
     fetch(scriptUrl, {
         method: 'GET',
