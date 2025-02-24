@@ -48,6 +48,19 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
 
+    // Проверка имени
+    if (!name || name.length < 2) {
+        alert('Пожалуйста, введите корректное имя (минимум 2 символа).');
+        return;
+    }
+
+    // Проверка телефона (пример для российских номеров)
+    const phonePattern = /^\+7\d{10}$/; // Пример: +71234567890
+    if (!phonePattern.test(phone)) {
+        alert('Пожалуйста, введите корректный номер телефона в формате +71234567890.');
+        return;
+    }
+
     const scriptUrl = `https://script.google.com/macros/s/AKfycby-FBk5pxEmPO4U_s3tDcW_mBn2iouSzqhnDMJKf-usPXHhPckArKqui3hzWNnkp8xQ/exec?name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`;
 
     fetch(scriptUrl, {

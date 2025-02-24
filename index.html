@@ -8,6 +8,34 @@
     <link rel="icon" type="image/png" href="images/icon-clean.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Service",
+          "name": "Химчистка мебели",
+          "description": "Профессиональная химчистка мебели в Петрозаводске. Удаление пятен, запахов и бактерий. Гарантия качества, доступные цены.",
+          "serviceType": "Химчистка мебели",
+          "areaServed": {
+            "@type": "City",
+            "name": "Петрозаводск"
+          },
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Химчистка мебели",
+            "telephone": "+79114248275",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Петрозаводск",
+              "addressCountry": "Россия"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "от 400 руб.",
+            "priceCurrency": "RUB"
+          }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -147,28 +175,28 @@
     <section id="services" class="services">
         <h2>Цены на услуги химчистки</h2>
         <div class="cards-container">
-            <div class="card">
+            <div class="card" itemscope itemtype="http://schema.org/Service">
                 <img src="images/pictureCouch.jpg" alt="Чистка дивана">
-                <h3>Химчистка дивана</h3>
-                <p>от 2500 руб.</p>
+                <h3 itemprop="name">Химчистка дивана</h3>
+                <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">от <span itemprop="price">2500 </span><span itemprop="priceCurrency" content="RUB">руб.</span></p>
                 <button class="openFormBtn">Заказать</button>
             </div>
-            <div class="card">
+            <div class="card" itemscope itemtype="http://schema.org/Service">
                 <img src="images/pictureChair.jpg" alt="Чистка кресла">
-                <h3>Химчистка кресла</h3>
-                <p>от 1500 руб.</p>
+                <h3 itemprop="name">Химчистка кресла</h3>
+                <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">от <span itemprop="price">1500 </span><span itemprop="priceCurrency" content="RUB">руб.</span></p>
                 <button class="openFormBtn">Заказать</button>
             </div>
-            <div class="card">
+            <div class="card" itemscope itemtype="http://schema.org/Service">
                 <img src="images/pictureMattress.jpg" alt="Чистка матраса">
-                <h3>Химчистка матраса</h3>
-                <p>от 2000 руб.</p>
+                <h3 itemprop="name">Химчистка матраса</h3>
+                <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">от <span itemprop="price">2000 </span><span itemprop="priceCurrency" content="RUB">руб.</span></p>
                 <button class="openFormBtn">Заказать</button>
             </div>
-            <div class="card">
+            <div class="card" itemscope itemtype="http://schema.org/Service">
                 <img src="images/pictureCovrolin.jpg" alt="Чистка ковролина">
-                <h3>Химчистка ковролина</h3>
-                <p>от 400 руб за кв.м.</p>
+                <h3 itemprop="name">Химчистка ковролина</h3>
+                <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">от <span itemprop="price">400 </span><span itemprop="priceCurrency" content="RUB">руб.</span> за кв.м.</p>
                 <button class="openFormBtn">Заказать</button>
             </div>
         </div>
