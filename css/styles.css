@@ -32,7 +32,7 @@ header .logo {
     font-weight: bold;
     color: #ffcc00;
     white-space: nowrap; 
-    margin-right: 20px; 
+    margin-right: 10px; 
 }
 
 .number i {
@@ -1056,6 +1056,7 @@ button:hover {
     header .number a, header .logo  {
         font-size: 19px;
         text-align: center;
+        margin-right: 5px;
     }
 
     header nav {
@@ -1090,7 +1091,7 @@ button:hover {
 
     /*  */
     .estimation {
-        bottom: -230px;
+        bottom: -240px;
         width: 95%;
         padding: 5px;
         gap: 0;
@@ -1269,6 +1270,14 @@ button:hover {
     }
 
     /* Popup */
+    .popup {
+        width: 90%;
+    }
+
+    .popup .close-btn {
+        top: -5px;
+    }
+
     .popup button {
         width: 60%;
     }
