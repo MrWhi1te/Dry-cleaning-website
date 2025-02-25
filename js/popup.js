@@ -1,37 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        document.getElementById("popup-overlay").style.display = "flex";
-    }, 5000); // 5 секунд
-
-    document.querySelectorAll(".close-btn").forEach(function(button) {
-        button.addEventListener("click", function() {
-            document.getElementById("popup-overlay").style.display = "none";
-        });
-    });
-
-    document.querySelectorAll(".actionBttn").forEach(function(button) {
-        button.addEventListener("click", function() {
-            document.getElementById("popup-overlay").style.display = "none";
-        });
-    });  
-});
-
 document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.querySelector('.scratch');
     const ctx = canvas.getContext('2d');
     const scratchLabel = document.querySelector('.scratch-label');
     const actionBttn = document.querySelector(".actionBttn");
+    const poputText = document.querySelector(".popup-text");
 
-    // Устанавливаем размеры canvas
-    canvas.width = 350;
+    // // Устанавливаем размеры canvas
+    canvas.width = 450;
     canvas.height = 200;
 
     // Заливаем canvas серым цветом (защитный слой)
-    ctx.fillStyle = '#696969';
+    // ctx.fillStyle = '#696969';
+    ctx.fillStyle = '#6969696c';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Настройки для стирания
     let isDrawing = false;
+
+    // Функция для подсчета стертых пикселей
+    function getErasedPercentage() {
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const pixels = imageData.data;
+        let erasedPixels = 0;
+
+        for (let i = 0; i < pixels.length; i += 4) {
+            // Если альфа-канал (прозрачность) равен 0, пиксель стерт
+            if (pixels[i + 3] < 15) {
+                erasedPixels++;
+            }
+        }
+
+        const totalPixels = canvas.width * canvas.height;
+        return (erasedPixels / totalPixels) * 100;
+    }
 
     // Функция для начала стирания
     function startScratch(e) {
@@ -42,8 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
         scratchLabel.classList.add('hidden');
 
         //
-        // actionBttn.style.display = "inline-block";
-        actionBttn.classList.add('visible');
+        // Проверяем, сколько пикселей стерто
+        const erasedPercentage = getErasedPercentage();
+        if (erasedPercentage > 40) {
+            actionBttn.classList.add('visible');
+            poputText.classList.add("visible");
+        }
 
         // Блокируем прокрутку на сенсорных устройствах
         if (e.type === 'touchstart') {
