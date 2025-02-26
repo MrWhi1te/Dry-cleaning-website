@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const poputText = document.querySelector(".popup-text");
 
     // // Устанавливаем размеры canvas
-    canvas.width = 450;
+    canvas.width = 400;
     canvas.height = 200;
 
     // Заливаем canvas серым цветом (защитный слой)
@@ -17,23 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Настройки для стирания
     let isDrawing = false;
 
-    // Функция для подсчета стертых пикселей
-    function getErasedPercentage() {
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const pixels = imageData.data;
-        let erasedPixels = 0;
-
-        for (let i = 0; i < pixels.length; i += 4) {
-            // Если альфа-канал (прозрачность) равен 0, пиксель стерт
-            if (pixels[i + 3] < 15) {
-                erasedPixels++;
-            }
-        }
-
-        const totalPixels = canvas.width * canvas.height;
-        return (erasedPixels / totalPixels) * 100;
-    }
-
     // Функция для начала стирания
     function startScratch(e) {
         isDrawing = true;
@@ -42,13 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Скрываем надпись при начале стирания
         scratchLabel.classList.add('hidden');
 
-        //
-        // Проверяем, сколько пикселей стерто
-        const erasedPercentage = getErasedPercentage();
-        if (erasedPercentage > 40) {
-            actionBttn.classList.add('visible');
-            poputText.classList.add("visible");
-        }
+        actionBttn.classList.add('visible');
+        poputText.classList.add("visible");
 
         // Блокируем прокрутку на сенсорных устройствах
         if (e.type === 'touchstart') {
