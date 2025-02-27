@@ -78,7 +78,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
 //
 document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(showNotification, 20000); // Показ уведомления через 10 секунд
+    setTimeout(showNotification, 10000); // Показ уведомления через 10 секунд
 });
 
 function showNotification() {

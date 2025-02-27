@@ -94,7 +94,7 @@ header nav ul li a:hover {
 }
 
 .hero {
-    background-image: url("../images/divan4.jpg");
+    background-image: url("../images/divan4.webp");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -556,7 +556,7 @@ header nav ul li a:hover {
 
 /* MEMO */
 .memo {
-    background-image: url("../images/divan5.jpg");
+    background-image: url("../images/divan5.webp");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -789,8 +789,9 @@ header nav ul li a:hover {
 }
 
 .connection-back {
-    background-image: url(../images/divan6.jpg);
+    background-image: url(../images/divan6.webp);
     background-position: center;
+    /* background-size: cover; */
     width: 1000px;
     margin-top: 20px;
     border-radius: 20px;
