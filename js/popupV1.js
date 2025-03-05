@@ -1,3 +1,9 @@
+document.querySelectorAll(".actionBttn").forEach(function(button) {
+    button.addEventListener('click', function() {
+        document.getElementById('stock-block').style.display = 'none';
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.querySelector('.scratch');
     const ctx = canvas.getContext('2d');

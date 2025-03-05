@@ -24,14 +24,14 @@ const checkVisibility = () => {
 window.addEventListener('scroll', checkVisibility);
 window.addEventListener('load', checkVisibility);
 
-//
-
+// Открытие формы заявки
 document.querySelectorAll('.openFormBtn').forEach(function(button) {
     button.addEventListener('click', function() {
         document.getElementById('overlay').style.display = 'flex';
     });
 });
 
+// Закрытие формы заявки
 document.getElementById('closeFormBtn').addEventListener('click', function() {
     document.getElementById('overlay').style.display = 'none';
 });
@@ -42,6 +42,23 @@ document.getElementById('overlay').addEventListener('click', function(event) {
     }
 });
 
+// Открытие акций
+function stockClick(){
+    document.getElementById("stock-block").style.display = "flex";
+}
+
+// Закрытие акций
+document.getElementById('stock-block').addEventListener('click', function(event) {
+    if (event.target === this) {
+        document.getElementById('stock-block').style.display = 'none';
+    }
+});
+
+document.getElementById('closeStockBtn').addEventListener('click', function() {
+    document.getElementById('stock-block').style.display = 'none';
+});
+
+// Отправка заявки
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -76,7 +93,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     });
 });
 
-//
+// Всплывающее уведомление
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(showNotification, 10000); // Показ уведомления через 10 секунд
 });

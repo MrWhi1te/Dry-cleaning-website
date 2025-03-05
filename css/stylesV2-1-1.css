@@ -449,111 +449,6 @@ header nav ul li a:hover {
     background-color: #ffe167;
 }
 
-/* Popup */
-.popup-overlay {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.popup {
-    /* background-image: url("../images/sale3.jpg"); */
-    /* background-size: cover; */
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 10px;
-    border-top: 5px solid #ffcc00;
-    max-width: 800px;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup h2 {
-    color: #ffcc00;
-    font-size: 24px;
-    margin-top: 5px;
-}
-
-.popup-card {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    background-image: url(../images/cleardivan.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.popup-text {
-    text-align: center;
-    font-size: 20px;
-    color: #ffffff;
-    /* background-color: #000000c5; */
-    border-radius: 10px;
-    padding: 1px;
-    opacity: 0;
-    transition: opacity 1s ease; 
-}
-
-.popup-text.visible {
-    opacity: 1; 
-}
-
-.scratch {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: url(../images/nasadka.png), auto;
-    z-index: 2;
-}
-
-.scratch-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #00000069;
-    z-index: 3; 
-    pointer-events: none; /* Чтобы надпись не блокировала стирание */
-    padding: 1px;
-    border-radius: 5px;
-    /* text-wrap: nowrap; */
-    transition: opacity 0.3s ease; 
-}
-
-.scratch-label.hidden {
-    opacity: 0; 
-}
-
-.popup button {
-    text-wrap: nowrap;
-    text-align: center;
-    width: 50%;
-    animation: shrink 1.5s infinite ease-out, borderPulse 1.5s infinite ease-out;
-    opacity: 0;
-    transition: opacity 1s ease; 
-    margin-bottom: 0;
-}
-
-.popup button.visible {
-    opacity: 1; 
-}
-
-.popup button:hover {
-    animation: step-end;
-}
-
 /* MEMO */
 .memo {
     background-image: url("../images/divan5.webp");
@@ -1049,6 +944,186 @@ button:hover {
   
   }
 
+/* STOCK-SIDE */
+.stock-side {
+    width: 40px;
+    background-color: #000000;
+    border-radius: 0 10px 10px 0;
+    border-right: 3px solid #ffcc00;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+    z-index: 10;
+    display: flex;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    animation: borderPulse 1.5s infinite ease-out;
+}
+
+.stock-side h2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); /* Поворот текста на 180 градусов */
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #ffcc00;
+}
+
+.stock-side i {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+}
+
+.stock-side::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+/* STOCK-BLOCK */
+.stock-block {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Popup */
+.popup-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-top: 5px solid #ffcc00;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closeStockBtn {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.popup h2 {
+    color: #ffcc00;
+    font-size: 24px;
+    margin-top: 5px;
+    padding: 1px;
+}
+
+.popup-card {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-image: url(../images/cleardivan.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.popup-text {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    /* background-color: #000000c5; */
+    border-radius: 10px;
+    padding: 1px;
+    opacity: 0;
+    transition: opacity 1s ease; 
+}
+
+.popup-text.visible {
+    opacity: 1; 
+}
+
+.scratch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: url(../images/nasadka.png), auto;
+    z-index: 2;
+}
+
+.scratch-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #00000069;
+    z-index: 3; 
+    pointer-events: none; /* Чтобы надпись не блокировала стирание */
+    padding: 1px;
+    border-radius: 5px;
+    /* text-wrap: nowrap; */
+    transition: opacity 0.3s ease; 
+}
+
+.scratch-label.hidden {
+    opacity: 0; 
+}
+
+.popup button {
+    text-wrap: nowrap;
+    text-align: center;
+    width: 50%;
+    animation: shrink 1.5s infinite ease-out, borderPulse 1.5s infinite ease-out;
+    opacity: 0;
+    transition: opacity 1s ease; 
+    margin-bottom: 0;
+}
+
+.popup button.visible {
+    opacity: 1; 
+}
+
+.popup button:hover {
+    animation: step-end;
+}
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
@@ -1270,6 +1345,14 @@ button:hover {
         width: 70%;
     }
 
+    /* NOTIFICATION */
+    .notification {
+        bottom: 10px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
     /* Popup */
     .popup-overlay {
         margin-top: 30px;
@@ -1279,12 +1362,39 @@ button:hover {
         width: 90%;
     }
 
+    .closeStockBtn {
+        top: -15px;
+    }
+
     .popup h2 {
         line-height: 1.1;
     }
 
     .popup button {
         width: 60%;
+    }
+
+    /* STOCK-SIDE */
+    .stock-side {
+        top: 97%;
+        width: 50%;
+    }
+
+    .stock-side h2 {
+        writing-mode: horizontal-tb;
+        text-wrap: nowrap;
+        transform: rotate(0deg);
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .stock-side i {
+        writing-mode: vertical-rl;
+        transform: rotate(0deg);
+        margin-bottom: 0;
+        margin-right: 5px;
     }
 }
 
@@ -1317,5 +1427,28 @@ button:hover {
 
     .company-block {
         margin-top: 330px;
+    }
+
+    .stock-side {
+        top: 97%;
+        width: 60%;
+    }
+
+    .popup {
+        width: 90%;
+    }
+
+    .closeStockBtn {
+        right: 25px;
+    }
+
+    .popup h2 {
+        font-size: 18px;
+    }
+
+    .popup-text {
+        font-size: 16px;
+        padding-left: 6px;
+        padding-right: 6px;
     }
 }

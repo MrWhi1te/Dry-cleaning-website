@@ -37,6 +37,23 @@
           }
         }
     </script>
+    <!-- Yandex.Metrika counter -->
+<!-- <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(100042795, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/100042795" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+ <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <header>
@@ -202,18 +219,6 @@
             </div>
         </div>
     </section>
-
-    <div id="popup-overlay" class="popup-overlay">
-        <div class="popup">
-            <h2>Хотите узнать, какой подарок вас ждёт? Очистите диван и откройте бонус!</h2>
-            <div class="popup-card">
-                <canvas class="scratch"></canvas>
-                <div class="scratch-label">Проведите здесь, чтобы увидеть подарок!</div>
-            </div>
-            <div class="popup-text">Специальное предложение! Закажите химчистку мебели до конца месяца и получите <strong>антибактериальную обработку для неё в подарок</strong>. <span style="color:#ffcc00;">Успейте забрать подарок!</span></div>
-            <button class="openFormBtn actionBttn">Заказать химчистку</button>
-        </div>
-    </div>
 
     <section id="memo" class="memo">
         <div class="memo-container">
@@ -484,6 +489,27 @@
             <span class="close-btn" onclick="closeNotification()">&times;</span>
             <p>Скидка 15% на любой заказ при оформление на сайте!</p>
             <button class="openFormBtn">Заказать</button>
+        </div>
+    </div>
+
+    <div class="stock-side" onclick="stockClick()">
+        <h2><i class="fa-solid fa-gift"></i>Скидки и бонусы!</h2>
+    </div>
+
+    <div id="stock-block" class="stock-block">
+        <div class="stock-content">
+            <div id="popup-overlay" class="popup-overlay">
+                <div class="popup">
+                    <span id="closeStockBtn" class="closeStockBtn">&times;</span>
+                    <h2>Хотите узнать, какой подарок вас ждёт? Очистите диван и откройте бонус!</h2>
+                    <div class="popup-card">
+                        <canvas class="scratch"></canvas>
+                        <div class="scratch-label">Проведите здесь, чтобы увидеть подарок!</div>
+                    </div>
+                    <div class="popup-text">Специальное предложение! Закажите химчистку мебели до конца месяца и получите <strong>антибактериальную обработку для неё в подарок</strong>. <span style="color:#ffcc00;">Успейте забрать подарок!</span></div>
+                    <button class="openFormBtn actionBttn">Заказать химчистку</button>
+                </div>
+            </div>
         </div>
     </div>
 
